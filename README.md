@@ -274,7 +274,7 @@ This will back up the all files and folders, once per day, and write it to ./bac
 50 23 * * * find ${DIRECTORY_PATH}/backups/backup* -type f -mtime +1 | xargs rm
 ```
 
-##### # backup exclude fuelphp, backups folders in ${DIRECTORY_PATH}
+##### # backup exclude lumen, backups folders in ${DIRECTORY_PATH}
 
 ```
 00 01 * * * tar -czvf ${DIRECTORY_PATH}/backups/'backup-example.com-'$(date +"\%Y-\%m-\%dT\%H-\%M-\%S")'.tar.gz' --exclude='backups' ${DIRECTORY_PATH}
